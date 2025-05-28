@@ -22,7 +22,7 @@ body {
     color: var(--text);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; /* Centraliza verticalmente */
     min-height: 100vh;
     padding: 24px;
     line-height: 1.5;
@@ -35,6 +35,14 @@ body {
     background-color: var(--card-bg);
     border-radius: 14px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body.loading .container {
+    transform: translateY(10px);
+    opacity: 0;
 }
 
 .logo {
@@ -165,27 +173,17 @@ body {
     text-decoration: underline;
 }
 
-/* Efeitos extras para sofisticação */
-.container {
-    transform: translateY(0);
-    opacity: 1;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-body.loading .container {
-    transform: translateY(10px);
-    opacity: 0;
-}
-
 @media (max-width: 480px) {
     .container {
-        padding: 40px 24px;
-        border-radius: 0;
+        max-width: 320px;  /* largura menor para deixar mais fino */
+        padding: 32px 20px; /* padding reduzido */
+        border-radius: 10px; /* bordas arredondadas */
     }
     
     body {
-        padding: 0;
-        align-items: flex-start;
-        padding-top: 20vh;
+        padding: 24px; /* mantém padding normal */
+        align-items: center; /* centraliza vertical */
+        justify-content: center; /* centraliza horizontal */
+        min-height: 100vh; /* garante altura total da tela */
     }
 }

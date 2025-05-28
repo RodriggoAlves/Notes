@@ -1,0 +1,191 @@
+:root {
+    --primary: #7E8DEC;
+    --primary-hover: #6A7BD6;
+    --bg: #121212;
+    --card-bg: #1E1E1E;
+    --text: #FFFFFF;
+    --text-secondary: #AEAEB2;
+    --border: #2C2C2E;
+    --input-bg: #2C2C2E;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 24px;
+    line-height: 1.5;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px;
+    padding: 48px 32px;
+    background-color: var(--card-bg);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.28);
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 48px;
+    gap: 16px;
+}
+
+.logo svg {
+    width: 48px;
+    height: 48px;
+}
+
+.logo h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: -0.5px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 18px 16px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 17px;
+    color: var(--text);
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(126, 141, 236, 0.18);
+}
+
+.form-group label {
+    position: absolute;
+    left: 16px;
+    top: 18px;
+    color: var(--text-secondary);
+    font-size: 17px;
+    pointer-events: none;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+    transform: translateY(-24px) scale(0.85);
+    transform-origin: left top;
+    color: var(--primary);
+    background-color: transparent;
+    padding: 0 4px;
+}
+
+.login-button {
+    width: 100%;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 12px;
+    transition: all 0.2s ease;
+}
+
+.login-button:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-1px);
+}
+
+.login-button:active {
+    transform: translateY(0);
+}
+
+.form-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    margin-top: 32px;
+}
+
+.forgot-password {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.forgot-password:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.form-footer p {
+    color: var(--text-secondary);
+    font-size: 15px;
+}
+
+.register-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+    transition: opacity 0.2s ease;
+}
+
+.register-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* Efeitos extras para sofisticação */
+.container {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+body.loading .container {
+    transform: translateY(10px);
+    opacity: 0;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 40px 24px;
+        border-radius: 0;
+    }
+    
+    body {
+        padding: 0;
+        align-items: flex-start;
+        padding-top: 20vh;
+    }
+}

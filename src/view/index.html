@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App | Login</title>
+    <link rel="stylesheet" href="/src/view/Styles/Login/Login.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4 6C4 4.89543 4.89543 4 6 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V6Z" fill="#7E8DEC"/>
+                <path d="M8 8H16V10H8V8Z" fill="white"/>
+                <path d="M8 12H16V14H8V12Z" fill="white"/>
+                <path d="M8 16H13V18H8V16Z" fill="white"/>
+            </svg>
+            <h1>Notes</h1>
+        </div>
+        
+        <form class="login-form">
+            <div class="form-group">
+                <input type="email" id="email" placeholder=" " required>
+                <label for="email">Email</label>
+            </div>
+            
+            <div class="form-group">
+                <input type="password" id="password" placeholder=" " required>
+                <label for="password">Senha</label>
+            </div>
+            
+            <button type="submit" class="login-button">Continuar</button>
+            
+            <div class="form-footer">
+                <a href="#" class="forgot-password">Esqueceu a senha?</a>
+                <p>Não tem uma conta? <a href="register.html" class="register-link">Cadastre-se</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

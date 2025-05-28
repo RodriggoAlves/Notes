@@ -1,0 +1,60 @@
+:root {
+  --cor-principal: #7E8DEC;
+  --cor-hover: #6A7BD6;
+  --fundo: #121212;
+  --texto: #FFFFFF;
+  --texto-sec: #AEAEB2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--fundo);
+  color: var(--texto);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecalho {
+  padding: 24px;
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--texto);
+}
+
+.area-principal {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botao-add {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  background-color: var(--cor-principal);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(126, 141, 236, 0.3);
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+.botao-add:hover {
+  background-color: var(--cor-hover);
+  transform: scale(1.05);
+}
+
+.botao-add:active {
+  transform: scale(0.98);
+}
